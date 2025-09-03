@@ -1,0 +1,4 @@
+Myself Parth Belwal. I am currently working on SIH - 2025.
+I am currently a member of a team which consists of 6 members.
+The problem statement index number that we have picked is 86.
+That is to generate an AI powered timetable creator.
