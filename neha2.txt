@@ -1,0 +1,4 @@
+Myself Neha Dubey. I am currently working in SIH-2025.
+I am currently a member of a team which consist of 6 members.
+The problem statement index number we have picked is 86.
+That is to generate an AI powered timetable creator.
