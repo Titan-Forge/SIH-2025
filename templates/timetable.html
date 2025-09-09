@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title>Timetable</title>
+</head>
+<body>
+    <h2>Generated Timetable</h2>
+    <table border="1">
+        <tr>
+            <th>Slot</th>
+            <th>Subject</th>
+            <th>Teacher</th>
+        </tr>
+        {% for row in schedule %}
+        <tr>
+            <td>{{ row.slot }}</td>
+            <td>{{ row.subject }}</td>
+            <td>{{ row.teacher }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>
