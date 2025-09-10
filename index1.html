@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timetable Generator</title>
+    <script>
+        function addRow() {
+            let table = document.getElementById("formTable");
+            let row = table.insertRow();
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            cell1.innerHTML = '<input type="text" name="subject" placeholder="Subject">';
+            cell2.innerHTML = '<input type="text" name="teacher" placeholder="Teacher">';
+        }
+    </script>
+</head>
+<body>
+    [9:31 am, 9/9/2025] PARTH BELWAL: <h2>Enter Subjects and Teachers</h2>
+    <form action="/generate" method="POST">
+        <table id="formTable" border="1" cellpadding="5">
+            <tr>
+                <td><input type="text" name="subject" placeholder="Subject"></td>
+                <td><input type="text" name="teacher" placeholder="Teacher"></td>
+            </tr>
+        </table>
+        <button type="button" onclick="addRow()">Add Row</button>
+        <button type="submit">Generate Timetable</button>
+    </form>
+</body>
+</html>
