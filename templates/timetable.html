@@ -1,23 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Timetable</title>
+  <meta charset="utf-8" />
+  <title>Generated Timetable</title>
 </head>
 <body>
-    <h2>Generated Timetable</h2>
-    <table border="1" cellpadding="10">
-        <tr>
-            <th>Slot</th>
-            <th>Subject</th>
-            <th>Teacher</th>
-        </tr>
-        {% for row in schedule %}
-        <tr>
-            <td>{{ row.slot }}</td>
-            <td>{{ row.subject }}</td>
-            <td>{{ row.teacher }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+  <h2>Generated Timetable</h2>
+  <table border="1" cellpadding="8">
+    <tr><th>Slot</th><th>Subject</th><th>Teacher</th></tr>
+    {% for row in schedule %}
+      <tr>
+        <td>{{ row.slot }}</td>
+        <td>{{ row.subject }}</td>
+        <td>{{ row.teacher }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <p><a href="/">Back</a> | <a href="/timetable/list">View Saved Timetables</a></p>
 </body>
 </html>
+
