@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/><title>Saved Timetables</title></head>
+<body>
+  <h2>Saved Timetables (Recent)</h2>
+  <table border="1" cellpadding="8">
+    <tr><th>ID</th><th>Slot</th><th>Subject</th><th>Teacher</th><th>Created At</th></tr>
+    {% for r in rows %}
+      <tr>
+        <td>{{ r['id'] }}</td>
+        <td>{{ r['slot'] }}</td>
+        <td>{{ r['subject'] }}</td>
+        <td>{{ r['teacher'] }}</td>
+        <td>{{ r['created_at'] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <p><a href="/">Back</a></p>
+</body>
+</html>
