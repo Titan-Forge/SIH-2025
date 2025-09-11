@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"/>
   <title>Generated Timetable</title>
 </head>
 <body>
   <h2>Generated Timetable</h2>
+  <p>
+    <a href="/export_csv">Download CSV</a> |
+    <button onclick="clearLatest()">Clear Latest Run</button>
+    <a href="/timetable/list">View All Saved Timetables</a>
+  </p>
   <table border="1" cellpadding="8">
-    <tr><th>Slot</th><th>Subject</th><th>Teacher</th></tr>
+    <tr>
+      <th>Slot</th>
+      <th>Subject</th>
+      <th>Teacher</th>
+      <th>Room</th>
+    </tr>
     {% for row in schedule %}
       <tr>
         <td>{{ row.slot }}</td>
         <td>{{ row.subject }}</td>
         <td>{{ row.teacher }}</td>
+        <td>{{ row.room }}</td>
       </tr>
     {% endfor %}
   </table>
-  <p><a href="/">Back</a> | <a href="/timetable/list">View Saved Timetables</a></p>
+
+<script>
+async function clearLatest() {
+  const r = await fetch('/clear_timetable', { method:'POST' });
+  const j = await r.json();
+  alert(JSON.stringify(j));
+  if (j.status === 'cleared') window.location='/';
+}
+</script>
 </body>
 </html>
+
 
