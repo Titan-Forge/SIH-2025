@@ -46,7 +46,7 @@ init_db()
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index3.html")
 
 @app.route('/generate', methods=['POST'])
 def generate():
