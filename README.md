@@ -12,4 +12,4 @@ Problem Statement 86
 1. Clone repo
 2. Install Flask → `pip install flask`
 3. Run → `python app.py`
-4. Open http://127.0.0.1:5000
+4. Open https://sih-2025-sgfl.onrender.com/
